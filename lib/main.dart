@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'widgets/my_gesture_detector.dart';
+
 // Everything must be run inside this main functions
 void main() {
   runApp(const MyApp());
@@ -38,6 +40,7 @@ class MyApp extends StatelessWidget {
             ),
           ],
         ),
+        body: MyGestureDetector(),
       ),
     );
   }
