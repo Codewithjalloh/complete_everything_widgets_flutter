@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 // G E S T U R E - D E T E C T O R
-//
 
 class MyGestureDetector extends StatelessWidget {
   const MyGestureDetector({super.key});
@@ -14,6 +13,9 @@ class MyGestureDetector extends StatelessWidget {
       },
       onDoubleTap: () {
         print("Double Tapped!!");
+      },
+      onLongPress: () {
+        print("Long Press");
       },
       child: Container(
         height: 50,
