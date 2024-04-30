@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
+// Everything must be run inside this main functions
 void main() {
   runApp(const MyApp());
 }
 
+// a constant stateless widget that never change every its build.
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -22,17 +24,17 @@ class MyApp extends StatelessWidget {
           // A widget to display before the toolbar's title.
           leading: IconButton(
             onPressed: () {},
-            icon: Icon(Icons.menu),
+            icon: const Icon(Icons.menu),
           ),
           // A list of Widgets to display in a row after the title widget.
           actions: [
             IconButton(
               onPressed: () {},
-              icon: Icon(Icons.info),
+              icon: const Icon(Icons.info),
             ),
             IconButton(
               onPressed: () {},
-              icon: Icon(Icons.search),
+              icon: const Icon(Icons.search),
             ),
           ],
         ),
