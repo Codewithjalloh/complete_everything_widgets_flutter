@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 class MyText extends StatelessWidget {
@@ -8,6 +10,10 @@ class MyText extends StatelessWidget {
     return const Text(
       "Sulay Jalloh",
       style: TextStyle(
+          backgroundColor: Colors.green,
+          fontStyle: FontStyle.italic,
+          textBaseline: TextBaseline.alphabetic,
+          letterSpacing: 24,
           color: Colors.red,
           fontSize: 23,
           fontWeight: FontWeight.bold,

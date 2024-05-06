@@ -1,3 +1,4 @@
+import 'package:complete_everything_widgets_flutter/widgets/my_column.dart';
 import 'package:complete_everything_widgets_flutter/widgets/my_text.dart';
 import 'package:flutter/material.dart';
 
@@ -18,34 +19,36 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        appBar: AppBar(
-          // App bar title
-          title: Text("Complete Widgets"),
-          // App bar background colour
-          backgroundColor: Colors.grey,
-          // controls the size of the shadow below the app bar
-          elevation: 50,
-          // A widget to display before the toolbar's title.
-          leading: IconButton(
-            onPressed: () {},
-            icon: const Icon(Icons.menu),
+          appBar: AppBar(
+            // App bar title
+            title: Text("Complete Widgets"),
+            // App bar background colour
+            backgroundColor: Colors.grey,
+            // controls the size of the shadow below the app bar
+            elevation: 50,
+            // A widget to display before the toolbar's title.
+            leading: IconButton(
+              onPressed: () {},
+              icon: const Icon(Icons.menu),
+            ),
+            // A list of Widgets to display in a row after the title widget.
+            actions: [
+              IconButton(
+                onPressed: () {},
+                icon: const Icon(Icons.info),
+              ),
+              IconButton(
+                onPressed: () {},
+                icon: const Icon(Icons.search),
+              ),
+            ],
           ),
-          // A list of Widgets to display in a row after the title widget.
-          actions: [
-            IconButton(
-              onPressed: () {},
-              icon: const Icon(Icons.info),
-            ),
-            IconButton(
-              onPressed: () {},
-              icon: const Icon(Icons.search),
-            ),
-          ],
-        ),
-        body: Center(child: MyText()),
-        // MyContainer()
-        // MyGestureDetector(),
-      ),
+          body: MyColumn()
+
+          //Center(child: MyText()),
+          // MyContainer()
+          // MyGestureDetector(),
+          ),
     );
   }
 }
