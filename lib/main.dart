@@ -1,4 +1,7 @@
 import 'package:complete_everything_widgets_flutter/widgets/my_column.dart';
+import 'package:complete_everything_widgets_flutter/widgets/my_gridview.dart';
+import 'package:complete_everything_widgets_flutter/widgets/my_row.dart';
+import 'package:complete_everything_widgets_flutter/widgets/my_stack.dart';
 import 'package:complete_everything_widgets_flutter/widgets/my_text.dart';
 import 'package:flutter/material.dart';
 
@@ -19,36 +22,42 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-          appBar: AppBar(
-            // App bar title
-            title: Text("Complete Widgets"),
-            // App bar background colour
-            backgroundColor: Colors.grey,
-            // controls the size of the shadow below the app bar
-            elevation: 50,
-            // A widget to display before the toolbar's title.
-            leading: IconButton(
+        appBar: AppBar(
+          // App bar title
+          title: Text("Complete Widgets"),
+          // App bar background colour
+          backgroundColor: Colors.grey,
+          // controls the size of the shadow below the app bar
+          elevation: 50,
+          // A widget to display before the toolbar's title.
+          leading: IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.menu),
+          ),
+          // A list of Widgets to display in a row after the title widget.
+          actions: [
+            IconButton(
               onPressed: () {},
-              icon: const Icon(Icons.menu),
+              icon: const Icon(Icons.info),
             ),
-            // A list of Widgets to display in a row after the title widget.
-            actions: [
-              IconButton(
-                onPressed: () {},
-                icon: const Icon(Icons.info),
-              ),
-              IconButton(
-                onPressed: () {},
-                icon: const Icon(Icons.search),
-              ),
-            ],
-          ),
-          body: MyColumn()
+            IconButton(
+              onPressed: () {},
+              icon: const Icon(Icons.search),
+            ),
+          ],
+        ),
+        body: MyGridview(),
 
-          //Center(child: MyText()),
-          // MyContainer()
-          // MyGestureDetector(),
-          ),
+        // MyStack(),
+
+        // MyRow(),
+
+        //MyColumn()
+
+        //Center(child: MyText()),
+        // MyContainer()
+        // MyGestureDetector(),
+      ),
     );
   }
 }
