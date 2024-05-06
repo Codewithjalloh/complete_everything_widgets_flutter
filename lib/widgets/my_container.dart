@@ -11,7 +11,7 @@ class MyContainer extends StatelessWidget {
         height: 100,
         width: 200,
         color: Colors.red,
-        child: Text(
+        child: const Text(
           "My Container Text",
           style: TextStyle(
             fontSize: 20,
