@@ -11,7 +11,6 @@ class MyContainer extends StatelessWidget {
         decoration: BoxDecoration(color: Colors.black),
         height: 100,
         width: 200,
-        color: Colors.red,
         child: const Text(
           "My Container Text",
           style: TextStyle(
