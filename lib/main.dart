@@ -7,6 +7,8 @@ import 'package:flutter/material.dart';
 
 import 'widgets/my_container.dart';
 import 'widgets/my_gesture_detector.dart';
+import 'widgets/my_gridview_builder.dart';
+import 'widgets/my_listview_builder.dart';
 
 // Everything must be run inside this main functions
 void main() {
@@ -46,7 +48,11 @@ class MyApp extends StatelessWidget {
             ),
           ],
         ),
-        body: MyGridview(),
+        body: ListViewBuilder(),
+
+        //MyGridviewBuilder(),
+
+        //MyGridview(),
 
         // MyStack(),
 
