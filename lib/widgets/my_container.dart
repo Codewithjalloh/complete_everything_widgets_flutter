@@ -8,6 +8,7 @@ class MyContainer extends StatelessWidget {
     // center the container
     return Center(
       child: Container(
+        decoration: BoxDecoration(color: Colors.black),
         height: 100,
         width: 200,
         color: Colors.red,
