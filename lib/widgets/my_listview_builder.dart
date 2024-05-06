@@ -14,6 +14,7 @@ class ListViewBuilder extends StatelessWidget {
     ];
 
     return ListView.builder(
+        // scrollDirection: Axis.vertical,
         itemCount: names.length,
         itemBuilder: (context, index) => ListTile(
               // selectedColor: Colors.green,

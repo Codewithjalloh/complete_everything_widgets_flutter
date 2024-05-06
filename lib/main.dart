@@ -1,3 +1,4 @@
+import 'package:complete_everything_widgets_flutter/pages/profile_page.dart';
 import 'package:complete_everything_widgets_flutter/widgets/my_column.dart';
 import 'package:complete_everything_widgets_flutter/widgets/my_gridview.dart';
 import 'package:complete_everything_widgets_flutter/widgets/my_row.dart';
@@ -5,6 +6,10 @@ import 'package:complete_everything_widgets_flutter/widgets/my_stack.dart';
 import 'package:complete_everything_widgets_flutter/widgets/my_text.dart';
 import 'package:flutter/material.dart';
 
+import 'pages/first_page.dart';
+import 'pages/home_page.dart';
+import 'pages/second_page.dart';
+import 'pages/settings_page.dart';
 import 'widgets/my_container.dart';
 import 'widgets/my_gesture_detector.dart';
 import 'widgets/my_gridview_builder.dart';
@@ -24,31 +29,31 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        appBar: AppBar(
-          // App bar title
-          title: Text("Complete Widgets"),
-          // App bar background colour
-          backgroundColor: Colors.grey,
-          // controls the size of the shadow below the app bar
-          elevation: 50,
-          // A widget to display before the toolbar's title.
-          leading: IconButton(
-            onPressed: () {},
-            icon: const Icon(Icons.menu),
-          ),
-          // A list of Widgets to display in a row after the title widget.
-          actions: [
-            IconButton(
-              onPressed: () {},
-              icon: const Icon(Icons.info),
-            ),
-            IconButton(
-              onPressed: () {},
-              icon: const Icon(Icons.search),
-            ),
-          ],
-        ),
-        body: ListViewBuilder(),
+        // appBar: AppBar(
+        //   // App bar title
+        //   title: Text("Complete Widgets"),
+        //   // App bar background colour
+        //   backgroundColor: Colors.grey,
+        //   // controls the size of the shadow below the app bar
+        //   elevation: 50,
+        //   // A widget to display before the toolbar's title.
+        //   leading: IconButton(
+        //     onPressed: () {},
+        //     icon: const Icon(Icons.menu),
+        //   ),
+        //   // A list of Widgets to display in a row after the title widget.
+        //   actions: [
+        //     IconButton(
+        //       onPressed: () {},
+        //       icon: const Icon(Icons.info),
+        //     ),
+        //     IconButton(
+        //       onPressed: () {},
+        //       icon: const Icon(Icons.search),
+        //     ),
+        //   ],
+
+        body: FirstPage(),
 
         //MyGridviewBuilder(),
 
@@ -64,6 +69,13 @@ class MyApp extends StatelessWidget {
         // MyContainer()
         // MyGestureDetector(),
       ),
+      routes: {
+        '/firstpage': (context) => FirstPage(),
+        '/secondpage': (context) => SecondPage(),
+        '/homepage': (context) => HomePage(),
+        '/profilepage': (context) => ProfilePage(),
+        '/settingspage': (context) => SettingsPage(),
+      },
     );
   }
 }
