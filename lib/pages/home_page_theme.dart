@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../components/my_box.dart';
+import '../themes/theme_provider.dart';
 
 class HomePageTheme extends StatelessWidget {
   const HomePageTheme({super.key});

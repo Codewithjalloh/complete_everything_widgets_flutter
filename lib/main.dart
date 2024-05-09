@@ -1,4 +1,5 @@
 import 'package:complete_everything_widgets_flutter/pages/counter_page.dart';
+import 'package:complete_everything_widgets_flutter/pages/home_page_theme.dart';
 import 'package:complete_everything_widgets_flutter/pages/profile_page.dart';
 import 'package:complete_everything_widgets_flutter/pages/todo_page.dart';
 import 'package:complete_everything_widgets_flutter/widgets/my_column.dart';
@@ -13,6 +14,7 @@ import 'pages/first_page.dart';
 import 'pages/home_page.dart';
 import 'pages/second_page.dart';
 import 'pages/settings_page.dart';
+import 'themes/theme_provider.dart';
 import 'widgets/my_container.dart';
 import 'widgets/my_gesture_detector.dart';
 import 'widgets/my_gridview_builder.dart';
@@ -35,7 +37,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: TodoPage(),
+        body: HomePageTheme(),
         // the counter page is all about stateful widget
         // CounterPage(),
 
