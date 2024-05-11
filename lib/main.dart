@@ -58,6 +58,7 @@ class MyApp extends StatelessWidget {
         '/profilepage': (context) => ProfilePage(),
         '/settingspage': (context) => SettingsPage(),
       },
+      theme: Provider.of<ThemeProvider>(context).themData,
     );
   }
 }
