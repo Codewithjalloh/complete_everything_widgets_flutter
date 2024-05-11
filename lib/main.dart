@@ -1,3 +1,4 @@
+import 'package:complete_everything_widgets_flutter/model/counter_model.dart';
 import 'package:complete_everything_widgets_flutter/pages/counter_page.dart';
 import 'package:complete_everything_widgets_flutter/pages/home_page_theme.dart';
 import 'package:complete_everything_widgets_flutter/pages/profile_page.dart';
@@ -10,6 +11,7 @@ import 'package:complete_everything_widgets_flutter/widgets/my_text.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import 'pages/counter_page_state_management.dart';
 import 'pages/first_page.dart';
 import 'pages/home_page.dart';
 import 'pages/second_page.dart';
@@ -23,7 +25,7 @@ import 'widgets/my_listview_builder.dart';
 // Everything must be run inside this main functions
 void main() {
   runApp(ChangeNotifierProvider(
-    create: (context) => ThemeProvider(),
+    create: (context) => CounterModel(),
     child: const MyApp(),
   ));
 }
@@ -35,30 +37,35 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: HomePageTheme(),
-        // the counter page is all about stateful widget
-        // CounterPage(),
+        debugShowCheckedModeBanner: false,
+        title: "Flutter App",
+        home: Scaffold(
+          body: MyHomePage(title: "Flutter Demo Page"),
+          // the counter page is all about stateful widget
+          // CounterPage(),
 
-        // all these widget are for basic understanding of most used flutter widgets
-        //MyGridviewBuilder(),
-        //MyGridview(),
-        // MyStack(),
-        // MyRow(),
-        //MyColumn()
-        //Center(child: MyText()),
-        // MyContainer()
-        // MyGestureDetector(),
-      ),
-      routes: {
-        '/firstpage': (context) => FirstPage(),
-        '/secondpage': (context) => SecondPage(),
-        '/homepage': (context) => HomePage(),
-        '/profilepage': (context) => ProfilePage(),
-        '/settingspage': (context) => SettingsPage(),
-      },
-      theme: Provider.of<ThemeProvider>(context).themData,
-    );
+          // all these widget are for basic understanding of most used flutter widgets
+          //MyGridviewBuilder(),
+          //MyGridview(),
+          // MyStack(),
+          // MyRow(),
+          //MyColumn()
+          //Center(child: MyText()),
+          // MyContainer()
+          // MyGestureDetector(),
+        ),
+        routes: {
+          '/firstpage': (context) => FirstPage(),
+          '/secondpage': (context) => SecondPage(),
+          '/homepage': (context) => HomePage(),
+          '/profilepage': (context) => ProfilePage(),
+          '/settingspage': (context) => SettingsPage(),
+        },
+        theme: ThemeData(
+            colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+            useMaterial3: true)
+
+        // Provider.of<ThemeProvider>(context).themData,
+        );
   }
 }
